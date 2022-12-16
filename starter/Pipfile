@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django = "*"
+pylint = "*"
+autopep8 = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
+
+[scripts]
+server = "python manage.py runserver"
+migrations = "python manage.py makemigrations dog_shelters"
+migrate = "python manage.py migrate"
