@@ -7,11 +7,12 @@ Shelter list
 {% block content %}
 <h2>{{ shelter.name }}</h2>
 <div>Located in {{ shelter.location }}</div>
+
 {% if shelter.dog_set.all %}
     <div>Here is the list of available dogs</div>
     {% for dog in shelter.dog_set.all %}
         <div>
-            <a href="">
+            <a href="{% url 'dog_detail' dog.id %}">
                 {{dog.name}}
             </a>
         </div>
